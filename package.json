@@ -1,0 +1,16 @@
+{
+  "name": "internal-engineering-documents",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "catalog": "node tooling/catalog.mjs",
+    "validate": "node tooling/validate.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check:reference": "node examples/validation-job/check-artifacts.mjs",
+    "review": "node tooling/review.mjs",
+    "release": "node tooling/release.mjs"
+  }
+}

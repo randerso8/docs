@@ -1,0 +1,2147 @@
+{
+  "schema_version": 1,
+  "authority": "Release manifest membership and lifecycle determine authority; catalog presence alone does not.",
+  "documents": [
+    {
+      "path": "architecture/README.md",
+      "id": "ARC-001",
+      "title": "Architecture scope and decision backlog",
+      "type": "guide",
+      "status": "draft",
+      "revision": 5,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-002"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "463099a4727b98ea4be45a9f638be8f5be686e15a78a748db7a1b24ec14633cd"
+    },
+    {
+      "path": "architecture/principles/engineering-principles.md",
+      "id": "ARC-002",
+      "title": "Engineering architecture principles",
+      "type": "standard",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001"
+      ],
+      "requirements": [
+        "ARC-DESIGN-001",
+        "ARC-DESIGN-002",
+        "ARC-DESIGN-003",
+        "ARC-DESIGN-004",
+        "ARC-DESIGN-005",
+        "ARC-DESIGN-006"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "58f93ea70fe4509743a25beeeb55411317ff4e2bbe4c9f59fce58a1de504afeb"
+    },
+    {
+      "path": "architecture/reference-architectures/application-and-workloads.md",
+      "id": "ARC-003",
+      "title": "Application and workload reference architecture",
+      "type": "guide",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "ARC-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007",
+        "STD-008"
+      ],
+      "requirements": [],
+      "requires": [
+        "ARC-DESIGN-001",
+        "ARC-DESIGN-002",
+        "ARC-DESIGN-003",
+        "ARC-DESIGN-004",
+        "DATA-STORE-001",
+        "DATA-STORE-003",
+        "IAM-CORE-003",
+        "IAM-CORE-002",
+        "INT-CONTRACT-004",
+        "REL-WORK-003",
+        "REL-WORK-006",
+        "ARC-DESIGN-005",
+        "ARC-DESIGN-006",
+        "IAM-CORE-005",
+        "INT-CONTRACT-001",
+        "INT-CONTRACT-002",
+        "INT-CONTRACT-005",
+        "REL-WORK-001",
+        "REL-WORK-002",
+        "REL-WORK-004",
+        "REL-WORK-005",
+        "REL-WORK-007",
+        "OBS-OPER-005",
+        "TEST-EVID-001",
+        "TEST-EVID-004",
+        "IAM-CORE-001",
+        "IAM-CORE-004"
+      ],
+      "supersedes": [],
+      "digest": "1175474f00cf20b4187fac07cd2fc3d61b16b9b30f0d587385f883ae0ad07e3d"
+    },
+    {
+      "path": "architecture/reference-architectures/validation-job-example.md",
+      "id": "ARC-004",
+      "title": "Worked REST and background validation job",
+      "type": "guide",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "java",
+          "spring",
+          "angular",
+          "postgresql"
+        ],
+        "workloads": [
+          "rest-api",
+          "scheduler"
+        ]
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "ARC-003",
+        "PAT-004",
+        "STD-003",
+        "TECH-009",
+        "STD-005",
+        "STD-006",
+        "TECH-008",
+        "ARC-002",
+        "STD-004",
+        "STD-008",
+        "TECH-010"
+      ],
+      "requirements": [],
+      "requires": [
+        "IAM-CORE-003",
+        "SPRING-APP-005",
+        "IAM-CORE-002",
+        "INT-CONTRACT-001",
+        "INT-CONTRACT-004",
+        "REL-WORK-003",
+        "REL-WORK-001",
+        "JAVA-CODE-002",
+        "JAVA-CODE-005",
+        "ARC-DESIGN-002",
+        "SPRING-APP-004",
+        "INT-CONTRACT-003",
+        "SPRING-APP-003",
+        "DATA-STORE-003",
+        "DATA-STORE-004",
+        "SPRING-APP-006",
+        "REL-WORK-007",
+        "SPRING-APP-007",
+        "TEST-EVID-003",
+        "ANG-APP-002",
+        "ANG-APP-004",
+        "ANG-APP-006",
+        "TEST-EVID-001"
+      ],
+      "supersedes": [],
+      "digest": "19664c23c12c031ecb2c244836ab4c03c7dc5122d9546eec1e9a5c2d7cda77aa"
+    },
+    {
+      "path": "governance/authority-and-ownership.md",
+      "id": "GOV-001",
+      "title": "Authority and ownership",
+      "type": "governance",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [],
+      "requirements": [
+        "GOV-AUTH-001",
+        "GOV-AUTH-002",
+        "GOV-AUTH-003"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "bad1a721c47c1940ac0078bfa094cba67fc9ce93113d963ebb6866c3677d4dc3"
+    },
+    {
+      "path": "governance/document-lifecycle.md",
+      "id": "GOV-002",
+      "title": "Document lifecycle and approvals",
+      "type": "governance",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001"
+      ],
+      "requirements": [
+        "GOV-LIFE-001",
+        "GOV-LIFE-002",
+        "GOV-LIFE-003"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "3de14c01d5f57ccf2ae57fab864b11c5ef85d83b4a4dc0b61afd6bd6af481e4f"
+    },
+    {
+      "path": "governance/information-handling.md",
+      "id": "GOV-003",
+      "title": "Internal information handling",
+      "type": "governance",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001"
+      ],
+      "requirements": [
+        "GOV-INFO-001",
+        "GOV-INFO-002",
+        "GOV-INFO-003"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "738af4658e0cc128c01741e288d80eb8101b0d9826c1c1a1bd721fc02e2470d2"
+    },
+    {
+      "path": "governance/standards-versioning.md",
+      "id": "GOV-004",
+      "title": "Versioned standards and releases",
+      "type": "governance",
+      "status": "draft",
+      "revision": 4,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-002",
+        "GOV-003"
+      ],
+      "requirements": [
+        "GOV-REL-001",
+        "GOV-REL-002",
+        "GOV-REL-003"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "9c74f737244bbbed24b4d2fa5654afaea95cb43db517a3287e924d473c38d09b"
+    },
+    {
+      "path": "governance/exceptions.md",
+      "id": "GOV-005",
+      "title": "Scoped exceptions",
+      "type": "governance",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-002",
+        "GOV-003",
+        "GOV-004"
+      ],
+      "requirements": [
+        "GOV-EXC-001",
+        "GOV-EXC-002"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "24a5a3af5b0a4c69129d79d65ab68a56c8e894dfcfa3c08b1ca050e4f3c54e6f"
+    },
+    {
+      "path": "governance/application-adoption.md",
+      "id": "GOV-006",
+      "title": "Application adoption",
+      "type": "governance",
+      "status": "draft",
+      "revision": 4,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-004",
+        "GOV-005",
+        "GOV-010"
+      ],
+      "requirements": [
+        "GOV-APP-001",
+        "GOV-APP-002"
+      ],
+      "requires": [
+        "GOV-AUTH-001",
+        "GOV-TECH-001",
+        "GOV-TECH-002",
+        "GOV-EXC-001",
+        "GOV-EXC-002"
+      ],
+      "supersedes": [],
+      "digest": "27510eec63d32311b402693b52da240267557775bc363c6bc3dfabe5f95c1b3c"
+    },
+    {
+      "path": "governance/authoring-and-discovery.md",
+      "id": "GOV-007",
+      "title": "Authoring and discovery",
+      "type": "governance",
+      "status": "draft",
+      "revision": 4,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-002"
+      ],
+      "requirements": [
+        "GOV-DOC-001",
+        "GOV-DOC-002"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "5a3f7e789cdddf505e9e854716f620aceef0ba956bb42212df62918b48676463"
+    },
+    {
+      "path": "governance/hosting-and-automation.md",
+      "id": "GOV-008",
+      "title": "Hosting and automation",
+      "type": "governance",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-002",
+        "GOV-003",
+        "GOV-004"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "4929def3a007bba92eb905ef0c288a1758b2a01052105cdda411fa6ab3804c3f"
+    },
+    {
+      "path": "governance/implementation-roadmap.md",
+      "id": "GOV-009",
+      "title": "Implementation roadmap and open decisions",
+      "type": "guide",
+      "status": "draft",
+      "revision": 8,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-002"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "62f66fa3b166e5baacd871594280ba152c9a550b0ea51ae2a33660f578fa1037"
+    },
+    {
+      "path": "governance/technology-support.md",
+      "id": "GOV-010",
+      "title": "Technology support and version decisions",
+      "type": "governance",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "STD-009",
+        "GOV-001",
+        "GOV-002",
+        "GOV-004",
+        "GOV-005"
+      ],
+      "requirements": [
+        "GOV-TECH-001",
+        "GOV-TECH-002",
+        "GOV-TECH-003",
+        "GOV-TECH-004",
+        "GOV-TECH-005"
+      ],
+      "requires": [
+        "DEL-BUILD-001",
+        "DEL-BUILD-002",
+        "GOV-AUTH-001",
+        "GOV-LIFE-001",
+        "GOV-REL-002",
+        "GOV-REL-003",
+        "GOV-EXC-001"
+      ],
+      "supersedes": [],
+      "digest": "4dc321aa7b6383b4d64dc137827922e9e591990c1b3358acc2bc3b0bc6b7a261"
+    },
+    {
+      "path": "governance/local-review-and-release.md",
+      "id": "GOV-011",
+      "title": "Local review and release procedure",
+      "type": "guide",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-002",
+        "GOV-003",
+        "GOV-004"
+      ],
+      "requirements": [],
+      "requires": [
+        "GOV-LIFE-001",
+        "GOV-LIFE-002",
+        "GOV-REL-001",
+        "GOV-REL-002",
+        "GOV-AUTH-002",
+        "GOV-INFO-001"
+      ],
+      "supersedes": [],
+      "digest": "834bf69f988d77323e13086b6cee8e0734ce5be6216bd8ecd0f7946e0575c279"
+    },
+    {
+      "path": "technologies/README.md",
+      "id": "GUIDE-001",
+      "title": "Technology discovery",
+      "type": "guide",
+      "status": "draft",
+      "revision": 4,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "aa2ce63e99e04d21a648e6fe55c934954eac6ac1ddc30ed7aba06b2885f20b27"
+    },
+    {
+      "path": "technologies/support-status.md",
+      "id": "GUIDE-002",
+      "title": "Technology support intake and decision index",
+      "type": "guide",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-010"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "99d28be4528aa100b1f3cedffafd86e5445af2f63f64d985fd8557bce1654de1"
+    },
+    {
+      "path": "patterns/README.md",
+      "id": "PAT-001",
+      "title": "Implementation pattern approval",
+      "type": "guide",
+      "status": "draft",
+      "revision": 4,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "e9ad536bb4828952aa9e5c53ee984ea92b0ebf9d040b9814e2e422efeccbba29"
+    },
+    {
+      "path": "patterns/integration/durable-work-receipts.md",
+      "id": "PAT-002",
+      "title": "Durable receipts for recoverable work",
+      "type": "implementation-pattern",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "postgresql"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006"
+      ],
+      "requirements": [],
+      "requires": [
+        "REL-WORK-003",
+        "REL-WORK-004",
+        "REL-WORK-005",
+        "REL-WORK-006",
+        "REL-WORK-007",
+        "DATA-STORE-001",
+        "DATA-STORE-003",
+        "INT-CONTRACT-001",
+        "IAM-CORE-002"
+      ],
+      "supersedes": [],
+      "digest": "015c71528badc9e4e1f5f68b0758e7b795bb31589060682bd4e8bddcb43761ea"
+    },
+    {
+      "path": "patterns/application/rest-request-pipeline.md",
+      "id": "PAT-003",
+      "title": "REST request processing pipeline",
+      "type": "implementation-pattern",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": [
+          "rest-api"
+        ]
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "ARC-002",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007"
+      ],
+      "requirements": [],
+      "requires": [
+        "ARC-DESIGN-002",
+        "ARC-DESIGN-004",
+        "SEC-BASE-002",
+        "SEC-BASE-007",
+        "IAM-CORE-002",
+        "IAM-CORE-003",
+        "IAM-CORE-004",
+        "INT-CONTRACT-004",
+        "DATA-STORE-003",
+        "REL-WORK-003",
+        "OBS-OPER-001"
+      ],
+      "supersedes": [],
+      "digest": "c8db39cc0b4407113fd47d8687ce717df548a24f7cb86fcffc6e625190899165"
+    },
+    {
+      "path": "patterns/operations/short-database-work-queue.md",
+      "id": "PAT-004",
+      "title": "Short database-owned background work",
+      "type": "implementation-pattern",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "postgresql"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "STD-004",
+        "STD-006"
+      ],
+      "requirements": [],
+      "requires": [
+        "DATA-STORE-001",
+        "DATA-STORE-003",
+        "REL-WORK-001",
+        "REL-WORK-003",
+        "REL-WORK-004",
+        "REL-WORK-006"
+      ],
+      "supersedes": [],
+      "digest": "e8ec14662ffa2bf57e56c3f30064db0d9ae03b1a4c4e48b235ba4efce6822e56"
+    },
+    {
+      "path": "standards/README.md",
+      "id": "STD-001",
+      "title": "Standards domains and priorities",
+      "type": "guide",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "712368196c7ce7d139e81e5ef4759934c8c5ab5eff00ce48ad21002a48a14ead"
+    },
+    {
+      "path": "standards/security/application-security.md",
+      "id": "STD-002",
+      "title": "Application security baseline",
+      "type": "standard",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-003",
+        "ARC-002"
+      ],
+      "requirements": [
+        "SEC-BASE-001",
+        "SEC-BASE-002",
+        "SEC-BASE-003",
+        "SEC-BASE-004",
+        "SEC-BASE-005",
+        "SEC-BASE-006",
+        "SEC-BASE-007"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "20f627279986b306abe698f063b00c5f27e6e92f29524bcdeba9311bd8e4bde2"
+    },
+    {
+      "path": "standards/identity-and-access/identity-and-authorization.md",
+      "id": "STD-003",
+      "title": "Identity and authorization",
+      "type": "standard",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "ARC-002",
+        "STD-002"
+      ],
+      "requirements": [
+        "IAM-CORE-001",
+        "IAM-CORE-002",
+        "IAM-CORE-003",
+        "IAM-CORE-004",
+        "IAM-CORE-005",
+        "IAM-CORE-006"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "68b3b50eb7e238cea4adf666a4df9678a6155b28cc41a86f75f06fa28436cbcf"
+    },
+    {
+      "path": "standards/data/persistence-and-migrations.md",
+      "id": "STD-004",
+      "title": "Persistence and schema evolution",
+      "type": "standard",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "ARC-002",
+        "STD-002"
+      ],
+      "requirements": [
+        "DATA-STORE-001",
+        "DATA-STORE-002",
+        "DATA-STORE-003",
+        "DATA-STORE-004",
+        "DATA-STORE-005",
+        "DATA-STORE-006"
+      ],
+      "requires": [],
+      "supersedes": [],
+      "digest": "04ee3d06750963e9223110bb967bdf3ef1470f428d87152ce390abac86fee7ee"
+    },
+    {
+      "path": "standards/api-and-integration/contracts-and-compatibility.md",
+      "id": "STD-005",
+      "title": "Integration contracts and compatibility",
+      "type": "standard",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "STD-002",
+        "STD-003"
+      ],
+      "requirements": [
+        "INT-CONTRACT-001",
+        "INT-CONTRACT-002",
+        "INT-CONTRACT-003",
+        "INT-CONTRACT-004",
+        "INT-CONTRACT-005",
+        "INT-CONTRACT-006"
+      ],
+      "requires": [
+        "SEC-BASE-005",
+        "SEC-BASE-007"
+      ],
+      "supersedes": [],
+      "digest": "f13becce91a17e6105f9c77eb71b3002961e177166869e4a4695196662db50e4"
+    },
+    {
+      "path": "standards/reliability/execution-and-recovery.md",
+      "id": "STD-006",
+      "title": "Reliable execution and recovery",
+      "type": "standard",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "STD-004",
+        "STD-005"
+      ],
+      "requirements": [
+        "REL-WORK-001",
+        "REL-WORK-002",
+        "REL-WORK-003",
+        "REL-WORK-004",
+        "REL-WORK-005",
+        "REL-WORK-006",
+        "REL-WORK-007"
+      ],
+      "requires": [
+        "DATA-STORE-003",
+        "INT-CONTRACT-002"
+      ],
+      "supersedes": [],
+      "digest": "97e3b1fb6e6171842fbe4c6208075968d6798a5d00a5b5b1e35aac7d9b9d35a8"
+    },
+    {
+      "path": "standards/observability/operational-signals.md",
+      "id": "STD-007",
+      "title": "Operational observability",
+      "type": "standard",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "STD-002",
+        "STD-003",
+        "STD-006"
+      ],
+      "requirements": [
+        "OBS-OPER-001",
+        "OBS-OPER-002",
+        "OBS-OPER-003",
+        "OBS-OPER-004",
+        "OBS-OPER-005"
+      ],
+      "requires": [
+        "SEC-BASE-007",
+        "IAM-CORE-005"
+      ],
+      "supersedes": [],
+      "digest": "fec8ae9f58d2c26651b6807d543df0484f4fde2800c7d050cf022ddbc1be2a84"
+    },
+    {
+      "path": "standards/testing/verification-evidence.md",
+      "id": "STD-008",
+      "title": "Engineering verification evidence",
+      "type": "standard",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "ARC-002",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007",
+        "GOV-001"
+      ],
+      "requirements": [
+        "TEST-EVID-001",
+        "TEST-EVID-002",
+        "TEST-EVID-003",
+        "TEST-EVID-004",
+        "TEST-EVID-005"
+      ],
+      "requires": [
+        "ARC-DESIGN-002",
+        "GOV-AUTH-001",
+        "GOV-AUTH-002"
+      ],
+      "supersedes": [],
+      "digest": "82b2d28e9a571b932ea913a4341452326dfb79352bf6ef07ba8a4eb42df3a124"
+    },
+    {
+      "path": "standards/delivery/build-and-change-control.md",
+      "id": "STD-009",
+      "title": "Builds configuration and change delivery",
+      "type": "standard",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "STD-002",
+        "STD-004",
+        "STD-008"
+      ],
+      "requirements": [
+        "DEL-BUILD-001",
+        "DEL-BUILD-002",
+        "DEL-BUILD-003",
+        "DEL-BUILD-004",
+        "DEL-BUILD-005"
+      ],
+      "requires": [
+        "SEC-BASE-003",
+        "DATA-STORE-002",
+        "TEST-EVID-001"
+      ],
+      "supersedes": [],
+      "digest": "0deeeebf491d143e6da4d30096009e6a3aea64da7a8efab38bb8e79eb2e54529"
+    },
+    {
+      "path": "technologies/java/README.md",
+      "id": "TECH-001",
+      "title": "Java guidance scope",
+      "type": "technology",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "java"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "12ca326ace9f6eb51a4683d765f5e451113986afd92dfa4776dedbff28399a04"
+    },
+    {
+      "path": "technologies/spring/README.md",
+      "id": "TECH-002",
+      "title": "Spring guidance scope",
+      "type": "technology",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "spring"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "b5e8deaeeb55a812725baaa5b603fa95222ff2cd5dc446200a7ada7de49131cf"
+    },
+    {
+      "path": "technologies/angular/README.md",
+      "id": "TECH-003",
+      "title": "Angular guidance scope",
+      "type": "technology",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "angular"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "4db9c392edd756ae07b67f1f730bc8de5e0c2d70f4d81accafb29bef3b532b2f"
+    },
+    {
+      "path": "technologies/postgresql/README.md",
+      "id": "TECH-004",
+      "title": "PostgreSQL guidance scope",
+      "type": "technology",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "postgresql"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "81f14733f83b160af133115f8ca1a205a6b31c2385fb0a68f26c5b1d5649e43d"
+    },
+    {
+      "path": "technologies/python/README.md",
+      "id": "TECH-005",
+      "title": "Python guidance scope",
+      "type": "technology",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "python"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "dd2d40089cb063029165bd54770c14120cd49b66bb1f0443d594107fafe4669a"
+    },
+    {
+      "path": "technologies/keycloak/README.md",
+      "id": "TECH-006",
+      "title": "Keycloak guidance scope",
+      "type": "technology",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "keycloak"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "7cb5933de60c3335ba388f04129f98925b3e06b218a19bddbc57e8ccfd5f1f6e"
+    },
+    {
+      "path": "technologies/valkey/README.md",
+      "id": "TECH-007",
+      "title": "Valkey guidance scope",
+      "type": "technology",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-24",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "valkey"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-007"
+      ],
+      "requirements": [],
+      "requires": [],
+      "supersedes": [],
+      "digest": "d999d8ae007a6405aa017069e918f463ed2bbc9c90d71eae44c38130d61cd2b5"
+    },
+    {
+      "path": "technologies/java/engineering-conventions.md",
+      "id": "TECH-008",
+      "title": "Java engineering conventions",
+      "type": "technology",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "java"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "ARC-002",
+        "STD-002",
+        "STD-005",
+        "STD-006"
+      ],
+      "requirements": [
+        "JAVA-CODE-001",
+        "JAVA-CODE-002",
+        "JAVA-CODE-003",
+        "JAVA-CODE-004",
+        "JAVA-CODE-005",
+        "JAVA-CODE-006"
+      ],
+      "requires": [
+        "ARC-DESIGN-002",
+        "SEC-BASE-007",
+        "REL-WORK-001",
+        "INT-CONTRACT-005"
+      ],
+      "supersedes": [],
+      "digest": "e85040cafbae06ec954e1e9de5f555cb686b4b86bd45d786a9fd49f4ed9f0607"
+    },
+    {
+      "path": "technologies/spring/application-conventions.md",
+      "id": "TECH-009",
+      "title": "Spring application conventions",
+      "type": "technology",
+      "status": "draft",
+      "revision": 3,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "spring"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "TECH-008",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-008",
+        "STD-009"
+      ],
+      "requirements": [
+        "SPRING-APP-001",
+        "SPRING-APP-002",
+        "SPRING-APP-003",
+        "SPRING-APP-004",
+        "SPRING-APP-005",
+        "SPRING-APP-006",
+        "SPRING-APP-007"
+      ],
+      "requires": [
+        "DEL-BUILD-003",
+        "SEC-BASE-003",
+        "DATA-STORE-003",
+        "INT-CONTRACT-003",
+        "IAM-CORE-003",
+        "REL-WORK-004",
+        "REL-WORK-006",
+        "TEST-EVID-003",
+        "IAM-CORE-004"
+      ],
+      "supersedes": [],
+      "digest": "a3186e54ad1843a2aa2c0ed3b1770a76ba767f8f6713dbc0cfac9e8829712438"
+    },
+    {
+      "path": "technologies/angular/application-conventions.md",
+      "id": "TECH-010",
+      "title": "Angular application conventions",
+      "type": "technology",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-28",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "angular"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "ARC-002",
+        "STD-002",
+        "STD-003",
+        "STD-005",
+        "STD-008"
+      ],
+      "requirements": [
+        "ANG-APP-001",
+        "ANG-APP-002",
+        "ANG-APP-003",
+        "ANG-APP-004",
+        "ANG-APP-005",
+        "ANG-APP-006",
+        "ANG-APP-007"
+      ],
+      "requires": [
+        "INT-CONTRACT-002",
+        "IAM-CORE-002",
+        "TEST-EVID-003"
+      ],
+      "supersedes": [],
+      "digest": "99d4dd8f57a53a6b4ca96c54609d31fc61b04cb6e6fbedcba843a9a9f75e29d3"
+    },
+    {
+      "path": "technologies/python/engineering-conventions.md",
+      "id": "TECH-011",
+      "title": "Python engineering conventions",
+      "type": "technology",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "python"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-010",
+        "ARC-002",
+        "STD-009",
+        "STD-006",
+        "STD-002",
+        "STD-005"
+      ],
+      "requirements": [
+        "PY-CODE-001",
+        "PY-CODE-002",
+        "PY-CODE-003",
+        "PY-CODE-004",
+        "PY-CODE-005",
+        "PY-CODE-006",
+        "PY-CODE-007"
+      ],
+      "requires": [
+        "ARC-DESIGN-002",
+        "DEL-BUILD-001",
+        "DEL-BUILD-002",
+        "REL-WORK-001",
+        "REL-WORK-007",
+        "SEC-BASE-007",
+        "INT-CONTRACT-005"
+      ],
+      "supersedes": [],
+      "digest": "09aae920813d1ff60d4afaa91acf627b48c235721ebf7df1cec393fa44873045"
+    },
+    {
+      "path": "technologies/postgresql/application-conventions.md",
+      "id": "TECH-012",
+      "title": "PostgreSQL application conventions",
+      "type": "technology",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "postgresql"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-010",
+        "STD-004",
+        "STD-002",
+        "STD-006",
+        "STD-005",
+        "STD-003"
+      ],
+      "requirements": [
+        "PG-DATA-001",
+        "PG-DATA-002",
+        "PG-DATA-003",
+        "PG-DATA-004",
+        "PG-DATA-005",
+        "PG-DATA-006",
+        "PG-DATA-007"
+      ],
+      "requires": [
+        "DATA-STORE-001",
+        "DATA-STORE-006",
+        "SEC-BASE-006",
+        "DATA-STORE-002",
+        "REL-WORK-002",
+        "REL-WORK-003",
+        "DATA-STORE-003",
+        "DATA-STORE-004",
+        "INT-CONTRACT-005",
+        "IAM-CORE-002"
+      ],
+      "supersedes": [],
+      "digest": "a8fd45fcd38e87a49614fa6e145c3684f694cdb5dd49448f8d3caa507250d19b"
+    },
+    {
+      "path": "technologies/keycloak/application-conventions.md",
+      "id": "TECH-013",
+      "title": "Keycloak application conventions",
+      "type": "technology",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "keycloak"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-010",
+        "STD-003",
+        "STD-002",
+        "GOV-003",
+        "STD-007"
+      ],
+      "requirements": [
+        "KC-IDP-001",
+        "KC-IDP-002",
+        "KC-IDP-003",
+        "KC-IDP-004",
+        "KC-IDP-005",
+        "KC-IDP-006",
+        "KC-IDP-007"
+      ],
+      "requires": [
+        "IAM-CORE-002",
+        "IAM-CORE-004",
+        "IAM-CORE-005",
+        "IAM-CORE-003",
+        "SEC-BASE-004",
+        "SEC-BASE-006",
+        "IAM-CORE-006",
+        "GOV-INFO-002",
+        "OBS-OPER-005",
+        "GOV-INFO-001"
+      ],
+      "supersedes": [],
+      "digest": "2aa7a2d7994b4a9c115d9cf41c1531305046f60efb2f8c1f30790686823a9928"
+    },
+    {
+      "path": "technologies/valkey/application-conventions.md",
+      "id": "TECH-014",
+      "title": "Valkey application conventions",
+      "type": "technology",
+      "status": "draft",
+      "revision": 1,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [
+          "valkey"
+        ],
+        "workloads": []
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-010",
+        "STD-004",
+        "STD-006",
+        "STD-002",
+        "STD-003"
+      ],
+      "requirements": [
+        "VK-STATE-001",
+        "VK-STATE-002",
+        "VK-STATE-003",
+        "VK-STATE-004",
+        "VK-STATE-005",
+        "VK-STATE-006",
+        "VK-STATE-007",
+        "VK-STATE-008"
+      ],
+      "requires": [
+        "DATA-STORE-001",
+        "REL-WORK-006",
+        "SEC-BASE-004",
+        "SEC-BASE-006",
+        "REL-WORK-001",
+        "IAM-CORE-002",
+        "REL-WORK-002",
+        "REL-WORK-003",
+        "DATA-STORE-006",
+        "REL-WORK-004",
+        "REL-WORK-005"
+      ],
+      "supersedes": [],
+      "digest": "ca24615910aee583809138010e7ab1de5d5aef83b344c9d34ae4f4490a7a6c87"
+    },
+    {
+      "path": "workload-profiles/rest-api.md",
+      "id": "WRK-001",
+      "title": "REST API workload profile",
+      "type": "workload-profile",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": [
+          "rest-api"
+        ]
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-006",
+        "ARC-002",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007",
+        "STD-008",
+        "STD-009"
+      ],
+      "requirements": [],
+      "requires": [
+        "ARC-DESIGN-002",
+        "IAM-CORE-002",
+        "IAM-CORE-003",
+        "INT-CONTRACT-002",
+        "INT-CONTRACT-004",
+        "INT-CONTRACT-006",
+        "REL-WORK-003",
+        "OBS-OPER-003",
+        "TEST-EVID-003"
+      ],
+      "supersedes": [],
+      "digest": "503154439899b40f2ff6c41b7dc02179fbf8bb777b2a7390bf859e9419fd9174"
+    },
+    {
+      "path": "workload-profiles/soap-service.md",
+      "id": "WRK-002",
+      "title": "SOAP service workload profile",
+      "type": "workload-profile",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": [
+          "soap-service"
+        ]
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-006",
+        "ARC-002",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007",
+        "STD-008",
+        "STD-009"
+      ],
+      "requirements": [],
+      "requires": [
+        "SEC-BASE-005",
+        "IAM-CORE-001",
+        "IAM-CORE-002",
+        "INT-CONTRACT-001",
+        "INT-CONTRACT-002",
+        "INT-CONTRACT-004",
+        "REL-WORK-001",
+        "REL-WORK-002",
+        "TEST-EVID-003"
+      ],
+      "supersedes": [],
+      "digest": "68f1079c1aa157cf22aeb207a75e5c289d45b436dc378eec0f9ce2981c5dd1d7"
+    },
+    {
+      "path": "workload-profiles/scheduler.md",
+      "id": "WRK-003",
+      "title": "Scheduler workload profile",
+      "type": "workload-profile",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": [
+          "scheduler"
+        ]
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-006",
+        "ARC-002",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007",
+        "STD-008",
+        "STD-009"
+      ],
+      "requirements": [],
+      "requires": [
+        "IAM-CORE-005",
+        "REL-WORK-003",
+        "REL-WORK-004",
+        "REL-WORK-005",
+        "REL-WORK-007",
+        "OBS-OPER-002",
+        "TEST-EVID-004"
+      ],
+      "supersedes": [],
+      "digest": "105078cd0f115e4bad4caf9517d03febb6536ed0b0f90a875a88acd57ef05ca6"
+    },
+    {
+      "path": "workload-profiles/batch-processor.md",
+      "id": "WRK-004",
+      "title": "Batch processor workload profile",
+      "type": "workload-profile",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": [
+          "batch-processor"
+        ]
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-006",
+        "ARC-002",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007",
+        "STD-008",
+        "STD-009"
+      ],
+      "requirements": [],
+      "requires": [
+        "SEC-BASE-002",
+        "DATA-STORE-002",
+        "DATA-STORE-003",
+        "REL-WORK-003",
+        "REL-WORK-005",
+        "REL-WORK-006",
+        "OBS-OPER-002",
+        "TEST-EVID-004"
+      ],
+      "supersedes": [],
+      "digest": "a8dc7aa68399412176c0e2e6b0a5c7a94493b889cb14dce6c2aea8f7bbdea887"
+    },
+    {
+      "path": "workload-profiles/message-consumer.md",
+      "id": "WRK-005",
+      "title": "Message consumer workload profile",
+      "type": "workload-profile",
+      "status": "draft",
+      "revision": 2,
+      "owner": "Software Engineering team",
+      "classification": "internal",
+      "authors": [
+        "ai-assisted-bootstrap",
+        "ai-assisted-drafting"
+      ],
+      "created": "2026-10-23",
+      "updated": "2026-10-23",
+      "review_due": "2027-01-23",
+      "applicability": {
+        "technologies": [],
+        "workloads": [
+          "message-consumer"
+        ]
+      },
+      "required_approvals": [
+        "engineering",
+        "security"
+      ],
+      "approvals": [],
+      "depends_on": [
+        "GOV-001",
+        "GOV-006",
+        "ARC-002",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007",
+        "STD-008",
+        "STD-009"
+      ],
+      "requirements": [],
+      "requires": [
+        "SEC-BASE-002",
+        "IAM-CORE-005",
+        "INT-CONTRACT-002",
+        "REL-WORK-001",
+        "REL-WORK-003",
+        "REL-WORK-006",
+        "REL-WORK-007",
+        "OBS-OPER-002",
+        "TEST-EVID-004"
+      ],
+      "supersedes": [],
+      "digest": "9aa3603cb162bc351ee11be2705996643209dac5997396dab2c5144bb003d386"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "system-documents",
+  "owner": "Software Engineering team",
+  "classification": "internal",
+  "phase": "bootstrap",
+  "approved_release": null,
+  "hosting": {
+    "provider": "local",
+    "repository_url": null,
+    "private": true,
+    "protected_reviews_verified": false
+  },
+  "roles": {
+    "engineering": [],
+    "security": [],
+    "release": []
+  },
+  "review": {
+    "mode": "local",
+    "delegation_evidence": null
+  }
+}

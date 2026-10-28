@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Local human review attestation",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "classification": {
+      "const": "internal"
+    },
+    "subject": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "document",
+            "release",
+            "delegation",
+            "exception"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "digest": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "enum": [
+        "engineering",
+        "security",
+        "release",
+        "delegation"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date"
+    },
+    "decision": {
+      "enum": [
+        "approved",
+        "rejected"
+      ]
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "classification",
+    "subject",
+    "reviewer",
+    "role",
+    "date",
+    "decision",
+    "statement"
+  ],
+  "additionalProperties": false
+}

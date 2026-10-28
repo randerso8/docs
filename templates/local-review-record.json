@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "classification": "internal",
+  "subject": {
+    "kind": "document",
+    "id": null,
+    "digest": null
+  },
+  "reviewer": null,
+  "role": null,
+  "date": null,
+  "decision": null,
+  "statement": null
+}

@@ -1,0 +1,7 @@
+{
+  "type": "https://api.example.invalid/problems/operation-key-conflict",
+  "title": "Operation key conflicts with existing input",
+  "status": 409,
+  "code": "OPERATION_KEY_CONFLICT",
+  "requestId": "synthetic-request-001"
+}

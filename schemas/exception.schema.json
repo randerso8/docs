@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Completed scoped application exception",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^EXC-[0-9]{3,}$"
+    },
+    "application": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "baseline_commit": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[A-Z]{2,8}-[A-Z0-9]{2,16}-[0-9]{3}$"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "risk": {
+      "type": "string",
+      "minLength": 1
+    },
+    "compensating_controls": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "remediation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expires": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date"
+    },
+    "required_approvals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "enum": [
+          "engineering",
+          "security"
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "approver": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "engineering",
+              "security"
+            ]
+          },
+          "date": {
+            "type": "string",
+            "minLength": 1,
+            "format": "date"
+          },
+          "digest": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(https://[^\\s]+|local:reviews/records/[a-f0-9]{64}\\.json)$"
+          }
+        },
+        "required": [
+          "approver",
+          "role",
+          "date",
+          "digest",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    }
+  },
+  "required": [
+    "id",
+    "application",
+    "owner",
+    "authors",
+    "baseline_commit",
+    "requirements",
+    "rationale",
+    "risk",
+    "compensating_controls",
+    "remediation",
+    "expires",
+    "required_approvals",
+    "approvals"
+  ],
+  "additionalProperties": false
+}

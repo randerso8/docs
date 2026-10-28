@@ -1,0 +1,5 @@
+# Accountable owner: Software Engineering team.
+# Add actual host-recognized team/user handles after selecting GitHub.
+# This commented file does not enforce owner review.
+# Expected shape: * @ORGANIZATION/TEAM
+# Independently review governance, schemas, tooling, workflows, and this file.

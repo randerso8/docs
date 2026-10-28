@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Completed application adoption",
+  "type": "object",
+  "properties": {
+    "application": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "technologies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "workloads": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "lock_file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "workload_description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile_selection_rationale": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "application",
+    "owner",
+    "technologies",
+    "workloads",
+    "lock_file",
+    "exceptions",
+    "workload_description",
+    "profile_selection_rationale"
+  ],
+  "additionalProperties": false
+}

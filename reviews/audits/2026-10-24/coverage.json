@@ -1,0 +1,770 @@
+{
+  "date": "2026-10-24",
+  "kind": "ai-self-audit",
+  "independent_approval": false,
+  "initial_documents": 49,
+  "final_documents": 49,
+  "requirements": 125,
+  "all_governed_sources_reviewed": true,
+  "tasks": [
+    {
+      "id": "T01",
+      "status": "complete",
+      "scope": "Inventory and all root entry points",
+      "document_ids": []
+    },
+    {
+      "id": "T02",
+      "status": "complete",
+      "scope": "Authority, lifecycle, handling, metadata",
+      "document_ids": [
+        "GOV-001",
+        "GOV-002",
+        "GOV-003",
+        "GOV-007"
+      ]
+    },
+    {
+      "id": "T03",
+      "status": "complete",
+      "scope": "Releases, exceptions, adoption, local workflow",
+      "document_ids": [
+        "GOV-004",
+        "GOV-005",
+        "GOV-006",
+        "GOV-008",
+        "GOV-011"
+      ]
+    },
+    {
+      "id": "T04",
+      "status": "complete",
+      "scope": "Roadmap/support/discovery",
+      "document_ids": [
+        "GOV-009",
+        "GOV-010",
+        "GUIDE-001",
+        "GUIDE-002"
+      ]
+    },
+    {
+      "id": "T05",
+      "status": "complete",
+      "scope": "Architecture/principles/reference view",
+      "document_ids": [
+        "ARC-001",
+        "ARC-002",
+        "ARC-003"
+      ]
+    },
+    {
+      "id": "T06",
+      "status": "complete",
+      "scope": "Security/identity/contracts",
+      "document_ids": [
+        "STD-002",
+        "STD-003",
+        "STD-005"
+      ]
+    },
+    {
+      "id": "T07",
+      "status": "complete",
+      "scope": "Persistence/reliability/delivery",
+      "document_ids": [
+        "STD-004",
+        "STD-006",
+        "STD-009"
+      ]
+    },
+    {
+      "id": "T08",
+      "status": "complete",
+      "scope": "Standards discovery/observability/verification",
+      "document_ids": [
+        "STD-001",
+        "STD-007",
+        "STD-008"
+      ]
+    },
+    {
+      "id": "T09",
+      "status": "complete",
+      "scope": "Java/Spring/Angular",
+      "document_ids": [
+        "TECH-001",
+        "TECH-002",
+        "TECH-003",
+        "TECH-008",
+        "TECH-009",
+        "TECH-010"
+      ]
+    },
+    {
+      "id": "T10",
+      "status": "complete",
+      "scope": "PostgreSQL/Keycloak",
+      "document_ids": [
+        "TECH-004",
+        "TECH-006",
+        "TECH-012",
+        "TECH-013"
+      ]
+    },
+    {
+      "id": "T11",
+      "status": "complete",
+      "scope": "Python/Valkey",
+      "document_ids": [
+        "TECH-005",
+        "TECH-007",
+        "TECH-011",
+        "TECH-014"
+      ]
+    },
+    {
+      "id": "T12",
+      "status": "complete",
+      "scope": "Five workload profiles",
+      "document_ids": [
+        "WRK-001",
+        "WRK-002",
+        "WRK-003",
+        "WRK-004",
+        "WRK-005"
+      ]
+    },
+    {
+      "id": "T13",
+      "status": "complete",
+      "scope": "Patterns/worked reference/SQL/OpenAPI/verification",
+      "document_ids": [
+        "PAT-001",
+        "PAT-002",
+        "PAT-003",
+        "PAT-004",
+        "ARC-004"
+      ]
+    },
+    {
+      "id": "T14",
+      "status": "complete",
+      "scope": "Schemas, tooling, tests, templates, inactive hosting",
+      "document_ids": []
+    },
+    {
+      "id": "T15",
+      "status": "complete",
+      "scope": "Integrated checks, coverage and closure report",
+      "document_ids": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "A01",
+      "severity": "Medium",
+      "title": "Navigation was treated as mandatory release dependency closure",
+      "status": "Fixed",
+      "resolution": "Removed reading-only dependencies from discovery indexes, roadmap, and technology landing pages; retained actual source prerequisites."
+    },
+    {
+      "id": "A02",
+      "severity": "Medium",
+      "title": "Applicability seeding and conditional non-applicability were ambiguous",
+      "status": "Fixed",
+      "resolution": "Specified canonical selectors, both-dimension matching, requirements-bearing seeds, optional pattern/guide handling, and reviewed source-based non-applicability. Exercised two different selections."
+    },
+    {
+      "id": "A03",
+      "severity": "Medium",
+      "title": "Deprecated guidance had inconsistent new-adoption treatment",
+      "status": "Fixed",
+      "resolution": "Aligned ownership, release, adoption, and agent instructions: existing use only; new adoption rejects deprecated closure."
+    },
+    {
+      "id": "A04",
+      "severity": "Medium",
+      "title": "Prohibited personal information conflicted with accountable review identities",
+      "status": "Fixed",
+      "resolution": "Allowed minimal verified work identifiers while excluding identity proof/personnel/contact/customer material. Clarified local access/backup controls."
+    },
+    {
+      "id": "A05",
+      "severity": "High",
+      "title": "Candidate preparation/application omitted metadata and revision safeguards",
+      "status": "Fixed",
+      "resolution": "Validate source metadata before writing a package and reject revision decreases at application. Two reproduced regressions."
+    },
+    {
+      "id": "A06",
+      "severity": "High",
+      "title": "Required review roles could be weakened and critical controls depended on paths",
+      "status": "Fixed",
+      "resolution": "Preserve required roles within a request; protect lifecycle/release/security control IDs after moves; require previous role authority for reviewed policy changes. Three regression cases."
+    },
+    {
+      "id": "A07",
+      "severity": "Medium",
+      "title": "Current reviewer changes could invalidate immutable retired history",
+      "status": "Fixed",
+      "resolution": "Keep structural historical evidence checks; use pinned historical authority. New retirement still requires current delegated approval against a baseline. Compare both review and last-release snapshots. Two regressions."
+    },
+    {
+      "id": "A08",
+      "severity": "Medium",
+      "title": "Nested work directories could hide governed documents from scanning",
+      "status": "Fixed",
+      "resolution": "Limit scratch exclusions to repository-root work/outputs; scan nested governed folders. Reproduced regression."
+    },
+    {
+      "id": "A09",
+      "severity": "Low",
+      "title": "The approved-release pointer accepted arbitrary strings",
+      "status": "Fixed",
+      "resolution": "Constrain pointer to a numeric version tag or null. Shape regression; actual Git tag/snapshot verification remains a separate step."
+    },
+    {
+      "id": "A10",
+      "severity": "Medium",
+      "title": "Bearer API 401 responses omitted the required challenge",
+      "status": "Fixed",
+      "resolution": "Add WWW-Authenticate to both 401 responses and enforce it in the fixture checker. Also specify malformed-path and unexpected GET errors. Reproduced negative test."
+    },
+    {
+      "id": "A11",
+      "severity": "Medium",
+      "title": "Request-level CSRF behavior was underspecified for automatic credentials",
+      "status": "Fixed",
+      "resolution": "Clarify the identity requirement and Spring evidence for cookie/browser-automatic credentials; no browser-session architecture selected."
+    },
+    {
+      "id": "A12",
+      "severity": "Low",
+      "title": "An example environment observation sounded permanently current",
+      "status": "Fixed",
+      "resolution": "Date the initial toolchain/container observation and retain pending runtime status."
+    },
+    {
+      "id": "A13",
+      "severity": "Low",
+      "title": "Inactive hosted checks omitted the newer example consistency check",
+      "status": "Fixed",
+      "resolution": "Align optional workflow/review template with required local checks; keep hosting inactive."
+    }
+  ],
+  "governed_documents_changed": [
+    {
+      "id": "ARC-001",
+      "file": "architecture/README.md",
+      "revision": 4
+    },
+    {
+      "id": "GOV-006",
+      "file": "governance/application-adoption.md",
+      "revision": 3
+    },
+    {
+      "id": "GOV-007",
+      "file": "governance/authoring-and-discovery.md",
+      "revision": 2
+    },
+    {
+      "id": "GOV-001",
+      "file": "governance/authority-and-ownership.md",
+      "revision": 2
+    },
+    {
+      "id": "GOV-002",
+      "file": "governance/document-lifecycle.md",
+      "revision": 3
+    },
+    {
+      "id": "GOV-009",
+      "file": "governance/implementation-roadmap.md",
+      "revision": 6
+    },
+    {
+      "id": "GOV-003",
+      "file": "governance/information-handling.md",
+      "revision": 2
+    },
+    {
+      "id": "GOV-011",
+      "file": "governance/local-review-and-release.md",
+      "revision": 2
+    },
+    {
+      "id": "GOV-004",
+      "file": "governance/standards-versioning.md",
+      "revision": 4
+    },
+    {
+      "id": "PAT-001",
+      "file": "patterns/README.md",
+      "revision": 4
+    },
+    {
+      "id": "STD-003",
+      "file": "standards/identity-and-access/identity-and-authorization.md",
+      "revision": 2
+    },
+    {
+      "id": "STD-001",
+      "file": "standards/README.md",
+      "revision": 3
+    },
+    {
+      "id": "TECH-003",
+      "file": "technologies/angular/README.md",
+      "revision": 3
+    },
+    {
+      "id": "TECH-001",
+      "file": "technologies/java/README.md",
+      "revision": 3
+    },
+    {
+      "id": "TECH-006",
+      "file": "technologies/keycloak/README.md",
+      "revision": 3
+    },
+    {
+      "id": "TECH-004",
+      "file": "technologies/postgresql/README.md",
+      "revision": 3
+    },
+    {
+      "id": "TECH-005",
+      "file": "technologies/python/README.md",
+      "revision": 3
+    },
+    {
+      "id": "GUIDE-001",
+      "file": "technologies/README.md",
+      "revision": 4
+    },
+    {
+      "id": "TECH-009",
+      "file": "technologies/spring/application-conventions.md",
+      "revision": 2
+    },
+    {
+      "id": "TECH-002",
+      "file": "technologies/spring/README.md",
+      "revision": 3
+    },
+    {
+      "id": "TECH-007",
+      "file": "technologies/valkey/README.md",
+      "revision": 3
+    }
+  ],
+  "checks": {
+    "validation": "passed; zero warnings",
+    "tests": {
+      "passed": 56,
+      "failed": 0,
+      "skipped": 0,
+      "new_regressions": 10,
+      "pre_fix_counterexamples_reproduced": 8
+    },
+    "example": {
+      "operations": 2,
+      "local_json_references": 25,
+      "status": "structure passed; runtime pending"
+    },
+    "discovery_exercises": {
+      "kind": "metadata-only proposed algorithm; no approved release or application adapter",
+      "python_batch": [
+        "ARC-002",
+        "GOV-001",
+        "GOV-002",
+        "GOV-003",
+        "GOV-004",
+        "GOV-005",
+        "GOV-006",
+        "GOV-007",
+        "GOV-010",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007",
+        "STD-008",
+        "STD-009",
+        "TECH-011",
+        "WRK-004"
+      ],
+      "java_spring_angular_postgresql_rest": [
+        "ARC-002",
+        "GOV-001",
+        "GOV-002",
+        "GOV-003",
+        "GOV-004",
+        "GOV-005",
+        "GOV-006",
+        "GOV-007",
+        "GOV-010",
+        "STD-002",
+        "STD-003",
+        "STD-004",
+        "STD-005",
+        "STD-006",
+        "STD-007",
+        "STD-008",
+        "STD-009",
+        "TECH-008",
+        "TECH-009",
+        "TECH-010",
+        "TECH-012",
+        "WRK-001"
+      ]
+    }
+  },
+  "source_documents": [
+    {
+      "id": "ARC-002",
+      "path": "architecture/principles/engineering-principles.md",
+      "revision": 1,
+      "digest": "58f93ea70fe4509743a25beeeb55411317ff4e2bbe4c9f59fce58a1de504afeb",
+      "task": "T05"
+    },
+    {
+      "id": "ARC-001",
+      "path": "architecture/README.md",
+      "revision": 4,
+      "digest": "b3afc784deb9f8583b7d53ce477ea5e656a8b171a05e3061ef73121573a1fd85",
+      "task": "T05"
+    },
+    {
+      "id": "ARC-003",
+      "path": "architecture/reference-architectures/application-and-workloads.md",
+      "revision": 1,
+      "digest": "99d670caca50107fd1892370221620c451eb3bf4bcdca626ff27e920114bd20d",
+      "task": "T05"
+    },
+    {
+      "id": "ARC-004",
+      "path": "architecture/reference-architectures/validation-job-example.md",
+      "revision": 1,
+      "digest": "19664c23c12c031ecb2c244836ab4c03c7dc5122d9546eec1e9a5c2d7cda77aa",
+      "task": "T13"
+    },
+    {
+      "id": "GOV-006",
+      "path": "governance/application-adoption.md",
+      "revision": 3,
+      "digest": "31827e0e7b4f49fc90c77b68462de54341637d6cfdf82ecfb1e047a114c97345",
+      "task": "T03"
+    },
+    {
+      "id": "GOV-007",
+      "path": "governance/authoring-and-discovery.md",
+      "revision": 2,
+      "digest": "f107989e9d94db77033dc1e4bc8b9b1a8e83ad4ebcd54c4e41f446e9b712ab8f",
+      "task": "T02"
+    },
+    {
+      "id": "GOV-001",
+      "path": "governance/authority-and-ownership.md",
+      "revision": 2,
+      "digest": "d80559ba265cf28d4f99632d4270b605b92b018341a3efa91d210b1387e477b0",
+      "task": "T02"
+    },
+    {
+      "id": "GOV-002",
+      "path": "governance/document-lifecycle.md",
+      "revision": 3,
+      "digest": "3de14c01d5f57ccf2ae57fab864b11c5ef85d83b4a4dc0b61afd6bd6af481e4f",
+      "task": "T02"
+    },
+    {
+      "id": "GOV-005",
+      "path": "governance/exceptions.md",
+      "revision": 1,
+      "digest": "24a5a3af5b0a4c69129d79d65ab68a56c8e894dfcfa3c08b1ca050e4f3c54e6f",
+      "task": "T03"
+    },
+    {
+      "id": "GOV-008",
+      "path": "governance/hosting-and-automation.md",
+      "revision": 3,
+      "digest": "4929def3a007bba92eb905ef0c288a1758b2a01052105cdda411fa6ab3804c3f",
+      "task": "T03"
+    },
+    {
+      "id": "GOV-009",
+      "path": "governance/implementation-roadmap.md",
+      "revision": 6,
+      "digest": "c160ffb54fa346684b42694e889503f43379e7da23bac1d4947349287bdc319f",
+      "task": "T04"
+    },
+    {
+      "id": "GOV-003",
+      "path": "governance/information-handling.md",
+      "revision": 2,
+      "digest": "738af4658e0cc128c01741e288d80eb8101b0d9826c1c1a1bd721fc02e2470d2",
+      "task": "T02"
+    },
+    {
+      "id": "GOV-011",
+      "path": "governance/local-review-and-release.md",
+      "revision": 2,
+      "digest": "834bf69f988d77323e13086b6cee8e0734ce5be6216bd8ecd0f7946e0575c279",
+      "task": "T03"
+    },
+    {
+      "id": "GOV-004",
+      "path": "governance/standards-versioning.md",
+      "revision": 4,
+      "digest": "9c74f737244bbbed24b4d2fa5654afaea95cb43db517a3287e924d473c38d09b",
+      "task": "T03"
+    },
+    {
+      "id": "GOV-010",
+      "path": "governance/technology-support.md",
+      "revision": 2,
+      "digest": "41233e9691b59cb8b5dd55c82d40da13a584ab7b01c4ac4e089a1fa63b5c0b02",
+      "task": "T04"
+    },
+    {
+      "id": "PAT-003",
+      "path": "patterns/application/rest-request-pipeline.md",
+      "revision": 1,
+      "digest": "c8db39cc0b4407113fd47d8687ce717df548a24f7cb86fcffc6e625190899165",
+      "task": "T13"
+    },
+    {
+      "id": "PAT-002",
+      "path": "patterns/integration/durable-work-receipts.md",
+      "revision": 1,
+      "digest": "015c71528badc9e4e1f5f68b0758e7b795bb31589060682bd4e8bddcb43761ea",
+      "task": "T13"
+    },
+    {
+      "id": "PAT-004",
+      "path": "patterns/operations/short-database-work-queue.md",
+      "revision": 1,
+      "digest": "e8ec14662ffa2bf57e56c3f30064db0d9ae03b1a4c4e48b235ba4efce6822e56",
+      "task": "T13"
+    },
+    {
+      "id": "PAT-001",
+      "path": "patterns/README.md",
+      "revision": 4,
+      "digest": "e9ad536bb4828952aa9e5c53ee984ea92b0ebf9d040b9814e2e422efeccbba29",
+      "task": "T13"
+    },
+    {
+      "id": "STD-005",
+      "path": "standards/api-and-integration/contracts-and-compatibility.md",
+      "revision": 1,
+      "digest": "f13becce91a17e6105f9c77eb71b3002961e177166869e4a4695196662db50e4",
+      "task": "T06"
+    },
+    {
+      "id": "STD-004",
+      "path": "standards/data/persistence-and-migrations.md",
+      "revision": 1,
+      "digest": "04ee3d06750963e9223110bb967bdf3ef1470f428d87152ce390abac86fee7ee",
+      "task": "T07"
+    },
+    {
+      "id": "STD-009",
+      "path": "standards/delivery/build-and-change-control.md",
+      "revision": 1,
+      "digest": "0deeeebf491d143e6da4d30096009e6a3aea64da7a8efab38bb8e79eb2e54529",
+      "task": "T07"
+    },
+    {
+      "id": "STD-003",
+      "path": "standards/identity-and-access/identity-and-authorization.md",
+      "revision": 2,
+      "digest": "68b3b50eb7e238cea4adf666a4df9678a6155b28cc41a86f75f06fa28436cbcf",
+      "task": "T06"
+    },
+    {
+      "id": "STD-007",
+      "path": "standards/observability/operational-signals.md",
+      "revision": 1,
+      "digest": "1e2d9f20036020ea2f5c085144b48b05f0435c61899a4ef9344033b09b6de065",
+      "task": "T08"
+    },
+    {
+      "id": "STD-001",
+      "path": "standards/README.md",
+      "revision": 3,
+      "digest": "712368196c7ce7d139e81e5ef4759934c8c5ab5eff00ce48ad21002a48a14ead",
+      "task": "T08"
+    },
+    {
+      "id": "STD-006",
+      "path": "standards/reliability/execution-and-recovery.md",
+      "revision": 1,
+      "digest": "97e3b1fb6e6171842fbe4c6208075968d6798a5d00a5b5b1e35aac7d9b9d35a8",
+      "task": "T07"
+    },
+    {
+      "id": "STD-002",
+      "path": "standards/security/application-security.md",
+      "revision": 1,
+      "digest": "20f627279986b306abe698f063b00c5f27e6e92f29524bcdeba9311bd8e4bde2",
+      "task": "T06"
+    },
+    {
+      "id": "STD-008",
+      "path": "standards/testing/verification-evidence.md",
+      "revision": 1,
+      "digest": "1486c19aceb499869d2497c31e3693c53aa55ac1885ab697294552949364cc8e",
+      "task": "T08"
+    },
+    {
+      "id": "TECH-010",
+      "path": "technologies/angular/application-conventions.md",
+      "revision": 1,
+      "digest": "a2ac134650413573c26c18e5cef931aa086a7993fe7b98578357e29a7c123ba2",
+      "task": "T09"
+    },
+    {
+      "id": "TECH-003",
+      "path": "technologies/angular/README.md",
+      "revision": 3,
+      "digest": "4db9c392edd756ae07b67f1f730bc8de5e0c2d70f4d81accafb29bef3b532b2f",
+      "task": "T09"
+    },
+    {
+      "id": "TECH-008",
+      "path": "technologies/java/engineering-conventions.md",
+      "revision": 1,
+      "digest": "e85040cafbae06ec954e1e9de5f555cb686b4b86bd45d786a9fd49f4ed9f0607",
+      "task": "T09"
+    },
+    {
+      "id": "TECH-001",
+      "path": "technologies/java/README.md",
+      "revision": 3,
+      "digest": "12ca326ace9f6eb51a4683d765f5e451113986afd92dfa4776dedbff28399a04",
+      "task": "T09"
+    },
+    {
+      "id": "TECH-013",
+      "path": "technologies/keycloak/application-conventions.md",
+      "revision": 1,
+      "digest": "2aa7a2d7994b4a9c115d9cf41c1531305046f60efb2f8c1f30790686823a9928",
+      "task": "T10"
+    },
+    {
+      "id": "TECH-006",
+      "path": "technologies/keycloak/README.md",
+      "revision": 3,
+      "digest": "7cb5933de60c3335ba388f04129f98925b3e06b218a19bddbc57e8ccfd5f1f6e",
+      "task": "T10"
+    },
+    {
+      "id": "TECH-012",
+      "path": "technologies/postgresql/application-conventions.md",
+      "revision": 1,
+      "digest": "a8fd45fcd38e87a49614fa6e145c3684f694cdb5dd49448f8d3caa507250d19b",
+      "task": "T10"
+    },
+    {
+      "id": "TECH-004",
+      "path": "technologies/postgresql/README.md",
+      "revision": 3,
+      "digest": "81f14733f83b160af133115f8ca1a205a6b31c2385fb0a68f26c5b1d5649e43d",
+      "task": "T10"
+    },
+    {
+      "id": "TECH-011",
+      "path": "technologies/python/engineering-conventions.md",
+      "revision": 1,
+      "digest": "09aae920813d1ff60d4afaa91acf627b48c235721ebf7df1cec393fa44873045",
+      "task": "T11"
+    },
+    {
+      "id": "TECH-005",
+      "path": "technologies/python/README.md",
+      "revision": 3,
+      "digest": "dd2d40089cb063029165bd54770c14120cd49b66bb1f0443d594107fafe4669a",
+      "task": "T11"
+    },
+    {
+      "id": "GUIDE-001",
+      "path": "technologies/README.md",
+      "revision": 4,
+      "digest": "aa2ce63e99e04d21a648e6fe55c934954eac6ac1ddc30ed7aba06b2885f20b27",
+      "task": "T04"
+    },
+    {
+      "id": "TECH-009",
+      "path": "technologies/spring/application-conventions.md",
+      "revision": 2,
+      "digest": "f666e9ee961113cb9e09d51d88e200d7f6ad404c120bd4d238d47039a0dc1396",
+      "task": "T09"
+    },
+    {
+      "id": "TECH-002",
+      "path": "technologies/spring/README.md",
+      "revision": 3,
+      "digest": "b5e8deaeeb55a812725baaa5b603fa95222ff2cd5dc446200a7ada7de49131cf",
+      "task": "T09"
+    },
+    {
+      "id": "GUIDE-002",
+      "path": "technologies/support-status.md",
+      "revision": 1,
+      "digest": "6cfb565c8e782c9190c39eab74438e7b15c24ab6dc1beaaf20c58580f710319a",
+      "task": "T04"
+    },
+    {
+      "id": "TECH-014",
+      "path": "technologies/valkey/application-conventions.md",
+      "revision": 1,
+      "digest": "ca24615910aee583809138010e7ab1de5d5aef83b344c9d34ae4f4490a7a6c87",
+      "task": "T11"
+    },
+    {
+      "id": "TECH-007",
+      "path": "technologies/valkey/README.md",
+      "revision": 3,
+      "digest": "d999d8ae007a6405aa017069e918f463ed2bbc9c90d71eae44c38130d61cd2b5",
+      "task": "T11"
+    },
+    {
+      "id": "WRK-004",
+      "path": "workload-profiles/batch-processor.md",
+      "revision": 2,
+      "digest": "a8dc7aa68399412176c0e2e6b0a5c7a94493b889cb14dce6c2aea8f7bbdea887",
+      "task": "T12"
+    },
+    {
+      "id": "WRK-005",
+      "path": "workload-profiles/message-consumer.md",
+      "revision": 2,
+      "digest": "9aa3603cb162bc351ee11be2705996643209dac5997396dab2c5144bb003d386",
+      "task": "T12"
+    },
+    {
+      "id": "WRK-001",
+      "path": "workload-profiles/rest-api.md",
+      "revision": 2,
+      "digest": "503154439899b40f2ff6c41b7dc02179fbf8bb777b2a7390bf859e9419fd9174",
+      "task": "T12"
+    },
+    {
+      "id": "WRK-003",
+      "path": "workload-profiles/scheduler.md",
+      "revision": 2,
+      "digest": "105078cd0f115e4bad4caf9517d03febb6536ed0b0f90a875a88acd57ef05ca6",
+      "task": "T12"
+    },
+    {
+      "id": "WRK-002",
+      "path": "workload-profiles/soap-service.md",
+      "revision": 2,
+      "digest": "68f1079c1aa157cf22aeb207a75e5c289d45b436dc378eec0f9ce2981c5dd1d7",
+      "task": "T12"
+    }
+  ]
+}

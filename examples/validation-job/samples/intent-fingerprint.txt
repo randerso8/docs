@@ -1,0 +1,4 @@
+Canonical ASCII/UTF-8 bytes, including final newline:
+validate-dataset\nsample-alpha\n1\n
+SHA-256: cbb70525fb4b2d0dd975353f5b5945278b27c993f2af6daa135ad27df08c8c50
+This is an input fingerprint, not an authentication credential.

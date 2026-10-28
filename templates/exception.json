@@ -1,0 +1,17 @@
+{
+  "id": null,
+  "application": null,
+  "owner": null,
+  "authors": [],
+  "baseline_commit": null,
+  "requirements": [],
+  "rationale": null,
+  "risk": null,
+  "compensating_controls": [],
+  "remediation": null,
+  "expires": null,
+  "required_approvals": [
+    "engineering"
+  ],
+  "approvals": []
+}

@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Repository control assertions",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "const": "internal"
+    },
+    "phase": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "bootstrap",
+        "active"
+      ]
+    },
+    "approved_release": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^v(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "hosting": {
+      "type": "object",
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "private": {
+          "const": true
+        },
+        "protected_reviews_verified": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "provider",
+        "repository_url",
+        "private",
+        "protected_reviews_verified"
+      ],
+      "additionalProperties": false
+    },
+    "roles": {
+      "type": "object",
+      "properties": {
+        "engineering": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "security": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "release": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "engineering",
+        "security",
+        "release"
+      ],
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "local",
+            "hosted"
+          ]
+        },
+        "delegation_evidence": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^local:reviews/records/[a-f0-9]{64}\\.json$"
+        }
+      },
+      "required": [
+        "mode",
+        "delegation_evidence"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "name",
+    "owner",
+    "classification",
+    "phase",
+    "approved_release",
+    "hosting",
+    "roles",
+    "review"
+  ],
+  "additionalProperties": false
+}

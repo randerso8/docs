@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Approved release manifest",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "classification": {
+      "const": "internal"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(GOV|ARC|STD|TECH|WRK|PAT|GUIDE)-[0-9]{3}$"
+          },
+          "digest": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "id",
+          "digest"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "approval": {
+      "type": "object",
+      "properties": {
+        "approver": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "const": "release"
+        },
+        "date": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "digest": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(https://[^\\s]+|local:reviews/records/[a-f0-9]{64}\\.json)$"
+        }
+      },
+      "required": [
+        "approver",
+        "role",
+        "date",
+        "digest",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "version",
+    "classification",
+    "documents",
+    "changes",
+    "approval",
+    "authors"
+  ],
+  "additionalProperties": false
+}

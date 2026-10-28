@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Governed document metadata",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(GOV|ARC|STD|TECH|WRK|PAT|GUIDE)-[0-9]{3}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "governance",
+        "guide",
+        "standard",
+        "architecture-decision",
+        "technology",
+        "workload-profile",
+        "implementation-pattern",
+        "technology-support-decision"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "draft",
+        "in-review",
+        "approved",
+        "deprecated",
+        "retired"
+      ]
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "const": "internal"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "created": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date"
+    },
+    "updated": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date"
+    },
+    "review_due": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date"
+    },
+    "applicability": {
+      "type": "object",
+      "properties": {
+        "technologies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "uniqueItems": true
+        },
+        "workloads": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "technologies",
+        "workloads"
+      ],
+      "additionalProperties": false
+    },
+    "required_approvals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "enum": [
+          "engineering",
+          "security"
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "approver": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "engineering",
+              "security"
+            ]
+          },
+          "date": {
+            "type": "string",
+            "minLength": 1,
+            "format": "date"
+          },
+          "digest": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(https://[^\\s]+|local:reviews/records/[a-f0-9]{64}\\.json)$"
+          }
+        },
+        "required": [
+          "approver",
+          "role",
+          "date",
+          "digest",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(GOV|ARC|STD|TECH|WRK|PAT|GUIDE)-[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[A-Z]{2,8}-[A-Z0-9]{2,16}-[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "requires": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[A-Z]{2,8}-[A-Z0-9]{2,16}-[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(GOV|ARC|STD|TECH|WRK|PAT|GUIDE)-[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "superseded_by": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(GOV|ARC|STD|TECH|WRK|PAT|GUIDE)-[0-9]{3}$"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "type",
+    "status",
+    "revision",
+    "owner",
+    "classification",
+    "authors",
+    "created",
+    "updated",
+    "review_due",
+    "applicability",
+    "required_approvals",
+    "approvals",
+    "depends_on",
+    "requirements",
+    "requires",
+    "supersedes"
+  ],
+  "additionalProperties": false
+}
